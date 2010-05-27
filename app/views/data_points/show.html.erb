@@ -1,0 +1,17 @@
+<h1>Results</h1>
+<dl>
+  <% if @data_point.nil? then %>
+      <dd> Sorry, no data found for that!</dd>
+  <% else %>
+      <dt style="float:right"><img src="<%= @data_point.map_url %>"/></dt>
+      <dd>
+        <dl>
+          <% @data_point.attributes.each { |a| %>
+              <dt> <strong><%= a[0] %> </strong></dt>
+              <dd><%= a[1] %></dd>
+          <% } %>
+        </dl>
+      </dd>
+  <% end %>
+</dl>
+<%= link_to 'Back', data_points_path %>

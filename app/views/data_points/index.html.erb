@@ -1,0 +1,20 @@
+<h1> US Geo Data Search </h1>
+
+<table>
+  <tr>
+    <td>
+
+
+      <% form_for :data_point, @data_point, :url => {:action => "search"} do |f| %>
+          <%= f.text_field :asciiname %>    
+          <%= submit_tag 'Search' %>
+      <% end %>
+
+    </td>
+  </tr>
+
+  
+</table>
+
+<br/>
+
